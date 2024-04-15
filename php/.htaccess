@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirigir todas las solicitudes que no sean archivos o directorios existentes a router.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L,QSA]

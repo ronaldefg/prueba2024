@@ -1,0 +1,9 @@
+/.env
+/logs/
+/cache/
+/php/vendor/
+/mysql_data/
+*.bak
+*.backup
+*.session
+*.log

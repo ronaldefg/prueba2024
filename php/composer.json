@@ -1,0 +1,30 @@
+{
+    "name": "ronaldefg/prueba2024",
+    "description": "Esta es un reto técnico para postular a la empresa Land Gorilla.",
+    "version": "0.0.1",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^11.1",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Api\\": "api/",
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ronald Fernandez"
+        }
+    ]
+}

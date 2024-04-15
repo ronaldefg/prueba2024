@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  php:
+    container_name: php_lg
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php:/var/www/html
+      - ./apache-config:/etc/apache2/sites-available/000-default.conf
+    networks:
+      - bridge
+
+  mysql:
+    container_name: mysql_lg
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: lg
+    networks:
+      - bridge
+
+networks:
+  bridge:
+    driver: bridge
